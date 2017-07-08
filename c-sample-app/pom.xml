@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+
+    Copyright © 2017 Corporation
+
+    All rights reserved.
+
+-->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.sandornemeth</groupId>
+        <artifactId>c-parent-pom</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+        <relativePath>../c-parent-pom</relativePath>
+    </parent>
+
+    <artifactId>c-sample-app</artifactId>
+    <name>c-sample-app</name>
+
+    <inceptionYear>2017</inceptionYear>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>c-web-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+</project>
